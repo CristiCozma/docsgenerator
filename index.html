@@ -7,21 +7,32 @@
 </head>
 
 <body>
-    <div id="header">
-        <h2>Document generator</h2>
-    </div>
+    <header>
+        <div id="header">
+            <img src="steag.jpeg" alt="tricolor">
+            <h2>Document generator</h2>
+        </div>
+    </header>
     <div id="content">
-        <h3>This is my first app</h3>
-        <h2>Introduceti CNP</h2>
-        <input type="text" name="codnumeric" id="cnp">
+        <div id="persoana">
+            <p>Introduceti CNP</p>
+            <input type="text" name="codnumeric" id="cnp" placeholder="Cod numeric personal">
+        </div>
+        <div id="vehicul">
+            <p>Introduceti VIN</p>
+            <input type="text" name="seriesasiu" id="vin" placeholder="serie sasiu">
+        </div>
     </div>
-    <div id="footer">
-        <h5></h5>Created with the help of
-        <a href="https://fasttrackit.org/" target="_blank">
-            <em>FastTrackIT</em></a>
-        </h5>
-        <p>I hope this app helped you</p>
-    </div>
+    <footer>
+        <div id="footer">
+            <h5></h5>Created with the help of
+            <a href="https://fasttrackit.org/" target="_blank">
+                <em>FastTrackIT</em></a>
+            </h5>
+            <p>I hope this app helped you</p>
+        </div>
+    </footer>
+
     <script src="functions.js"></script>
 </body>
 
