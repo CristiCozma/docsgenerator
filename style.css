@@ -22,6 +22,7 @@ body {
 #header img {
     height: 100px;
     filter: blur(1px);
+    padding-left: 20px;
 }
 
 p {
