@@ -44,19 +44,20 @@ loadList();
 
 
 
-function searchPersons(text) {
-    console.warn("search", text, allPersons);
-    return allPersons.filter(person => {
-        return person.cnp.indexOf(text) > -1;
+function searchPersons(cnp) {
+    console.warn("search", cnp, allPersons);
+    const found = allPersons.find(function (p) {
+        return p.cnp === cnp;
     });
+    return found ? [found] : allPersons; //ternary if
 }
 
 function addEventListner() {
     const search = document.querySelector('#search');
     search.addEventListener("input", e => {
-        const text = e.target.value;
-        const filtrate = searchPersons(text);
-        insertPersons(filtrate);
+        const cnp = e.target.value;
+        const foundPerson = searchPersons(cnp);
+        insertPersons(foundPerson);
     });
 }
 
