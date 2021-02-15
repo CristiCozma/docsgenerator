@@ -1,6 +1,6 @@
 const API = {
     CREATE: {
-        URL: "http://localhost:3000/docsgenerator-json/create",
+        URL: "http://localhost:3000/docsgenerator/create",
         METHOD: "POST"
     },
     READ: {
