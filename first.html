@@ -18,7 +18,7 @@
     <div class="subheader">
         <ul class="navbar">
             <li> <a a href="index.html">Home</a></li>
-            <li> <a class="activ-link"  href="first.html" href="#">Cerere de inmatriculare</a></li>
+            <li> <a class="activ-link" href="first.html" href="#">Cerere de inmatriculare</a></li>
             <li> <a href="#">Formular B</a></li>
             <li> <a href="#">Formular C</a></li>
             <li> <a href="#">Formular D</a></li>
@@ -30,7 +30,7 @@
             <div id="persoana">
                 <p>Introduceti CNP</p>
                 <input maxlength="13" type="text" name="codNumeric" id="search" placeholder="Cod numeric personal">
-                <button>OK</button>
+                <button id="submit-button">OK</button>
             </div>
             <!--
             <div id="vehicul">
@@ -43,30 +43,40 @@
         <div id="main">
             <div id="home" class="page">
                 <h2>Cerere de inmatriculare</h2>
-            <p>1. Subsemnatul (Subscrisa) <input type="text"> ,C.N.P. (C.U.I) <input type="text"> cu domiciliul / sediul
-             in localitatea <input type="text">, strada <input type="text">, nr. <input type="text">, bl. <input type="text">
-            ,sc. <input type="text">, et. <input type="text">, ap. <input type="text">, sectorul/judetul <input type="text">
-        , e-mail* <input type="text">, tel.* <input type="text">, solicit :</p>
-        <ul class="ullinks">
-            <li><input type="checkbox"> inmatriculare</li>
-            <li><input type="checkbox">inmatricularea temporara</li>
-            <li><input type="checkbox">transcrierea transmiterii dreptului de proprietate</li>
-            <li><input type="checkbox">eliberarea unui duplicat al certificatului de înmatriculare</li>
-            <li><input type="checkbox">eliberarea unui nou certificat ca urmare a modificării datelor înscrise</li>
-            <li><input type="checkbox">radierea</li>
-            <li><input type="checkbox">autorizarea provizorie pentru o perioadă de <input type="text"> zile</li>
-            <li><input type="checkbox">duplicat placă nr. înmatriculare/placă suplimentară <input type="text"> buc</li>
-            <li><input type="checkbox">păstrarea combinației numărului de înmatriculare.</li>
-        </ul>
-            <p>a vehicului marca <input type="text"> tip <input type="text"> numar de identificare <input type="text">
-               , an fabricatie <input type="text"> numarul de inmatriculare <input type="text"> dobandit la data de <input type="text">
-               prin(cumparare, donatie, mostenire, schimb, alt mod) <input type="text"> de la <input type="text">.</p>
-            <p>2. Se completează doar în cazul înscrierii în certificatul de înmatriculare şi a altei persoane care poate
-                folosi vehiculul în virtutea unui drept legal, altul decât cel de proprietate: <br> 
-                Nume, prenume / denumire <input type="text"> <br>
-                C.N.P.(C.U.I) <input type="text"></p>
-            <p>                
-                * Am luat cunoștință că adresa e-mail și numărul de telefon sunt opționale, iar în măsura
+                <p>1. Subsemnatul (Subscrisa) <input type="text" name="firstName"> ,C.N.P. (C.U.I) <input type="text"
+                        name="cnp"> cu domiciliul /
+                    sediul
+                    in localitatea <input type="text">, strada <input type="text">, nr. <input type="text">, bl. <input
+                        type="text">
+                    ,sc. <input type="text">, et. <input type="text">, ap. <input type="text">, sectorul/judetul <input
+                        type="text">
+                    , e-mail* <input type="text">, tel.* <input type="text">, solicit :</p>
+                <ul class="ullinks">
+                    <li><input type="checkbox"> inmatriculare</li>
+                    <li><input type="checkbox">inmatricularea temporara</li>
+                    <li><input type="checkbox">transcrierea transmiterii dreptului de proprietate</li>
+                    <li><input type="checkbox">eliberarea unui duplicat al certificatului de înmatriculare</li>
+                    <li><input type="checkbox">eliberarea unui nou certificat ca urmare a modificării datelor înscrise
+                    </li>
+                    <li><input type="checkbox">radierea</li>
+                    <li><input type="checkbox">autorizarea provizorie pentru o perioadă de <input type="text"> zile</li>
+                    <li><input type="checkbox">duplicat placă nr. înmatriculare/placă suplimentară <input type="text">
+                        buc</li>
+                    <li><input type="checkbox">păstrarea combinației numărului de înmatriculare.</li>
+                </ul>
+                <p>a vehicului marca <input type="text"> tip <input type="text"> numar de identificare <input
+                        type="text">
+                    , an fabricatie <input type="text"> numarul de inmatriculare <input type="text"> dobandit la data de
+                    <input type="text">
+                    prin(cumparare, donatie, mostenire, schimb, alt mod) <input type="text"> de la <input type="text">.
+                </p>
+                <p>2. Se completează doar în cazul înscrierii în certificatul de înmatriculare şi a altei persoane care
+                    poate
+                    folosi vehiculul în virtutea unui drept legal, altul decât cel de proprietate: <br>
+                    Nume, prenume / denumire <input type="text"> <br>
+                    C.N.P.(C.U.I) <input type="text"></p>
+                <p>
+                    * Am luat cunoștință că adresa e-mail și numărul de telefon sunt opționale, iar în măsura
                     în care sunt furnizate, sunt de acord cu prelucrarea acestora în vederea comunicării
                     oricăror informații de interes cu privire la operațiunea solicitată sau vehiculul care face
                     obiectul acesteia. <br> Am luat cunoştinţă de conţinutul Notei de Informare. <br>

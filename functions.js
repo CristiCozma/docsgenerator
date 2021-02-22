@@ -6,6 +6,10 @@ const API = {
     READ: {
         URL: "http://localhost:3000/docsgenerator",
         METHOD: "GET"
+    },
+    GET: {
+        URL: "http://localhost:3000/docsgenerator/person",
+        METHOD: "GET"
     }
 };
 
@@ -41,7 +45,29 @@ function loadList() {
 
 loadList();
 
-fetch(API.READ.URL + "/person?cnp=2901112265544")
+let currentPerson;
+function getPerson(cnp) {
+    fetch(API.GET.URL + `?cnp=${cnp}`)
+        .then(res => res.json())
+        .then(persons => {
+            const person = persons[0];
+            console.log(person);
+            currentPerson = person;
+            if (person) {
+                console.info(Object.keys(person));
+                Object.keys(person).forEach(key => {
+                    console.warn('key', key);
+                    const input = document.querySelector(`input[name=${key}]`);
+                    if (input) {
+                        input.value = person[key];
+                    }
+
+                })
+            } else {
+                document.querySelector('input[name=cnp]').value = cnp;
+            }
+        });
+}
 
 
 function searchPersons(cnp) {
@@ -79,17 +105,33 @@ function addPerson() {
         });
 }
 
-function addEventListner() {
-    const search = document.getElementById('search');
-    search.addEventListener("input", e => {
-        const cnp = e.target.value;
-        const foundPerson = searchPersons(cnp);
-        insertPersons(foundPerson);
-    });
+// function addEventListner() {
+//     const search = document.getElementById('search');
+//     search.addEventListener("input", e => {
+//         const cnp = e.target.value;
+//         const foundPerson = searchPersons(cnp);
+//         insertPersons(foundPerson);
+//     });
 
-    const saveBtn = document.querySelector('#list tfoot button');
-    saveBtn.addEventListener("click", addPerson);
-}
+//     const saveBtn = document.querySelector('#list tfoot button');
+//     saveBtn.addEventListener("click", addPerson);
+// }
 
-addEventListner();
+// addEventListner();
 
+const searchInput = document.getElementById("search");
+const okButton = document.getElementById("submit-button");
+okButton.addEventListener("click", () => {
+    getPerson(searchInput.value);
+});
+
+
+// todo 
+// - click on "Print"
+//   - if (crrentPerson) { update() } else { create() }
+//   - window.print() (https://github.com/nmatei/simple-quiz-app/blob/master/src/utilities.ts)
+
+// css for print:
+// https://github.com/nmatei/simple-quiz-app/blob/master/public/index.html
+//  see css/print.css
+// hide header and side-bar
