@@ -4,7 +4,7 @@ App that generates documents for institutions
 
 # Live Preview
 
-
+- [Demo](https://cristicozma.github.io/docsgenerator/)
 
 # Features
 
