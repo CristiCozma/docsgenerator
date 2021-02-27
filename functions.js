@@ -13,6 +13,9 @@ const API = {
     }
 };
 
+if (location.host === "cristicozma.github.io") {
+    API.READ.URL = "/api/data/persons.json"
+}
 
 function insertPersons(persons) {
     const tbody = document.querySelector('#list tbody');
