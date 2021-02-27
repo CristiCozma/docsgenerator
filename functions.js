@@ -14,7 +14,7 @@ const API = {
 };
 
 if (location.host === "cristicozma.github.io") {
-    API.READ.URL = "/api/data/persons.json"
+    API.READ.URL = "persons.json"
 }
 
 function insertPersons(persons) {
