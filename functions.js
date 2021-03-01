@@ -7,6 +7,10 @@ const API = {
         URL: "http://localhost:3000/docsgenerator",
         METHOD: "GET"
     },
+    UPDATE: {
+        URL: "http://localhost:3000/docsgenerator/update",
+        METHOD: "PUT"
+    },
     GET: {
         URL: "http://localhost:3000/docsgenerator/person",
         METHOD: "GET"
@@ -90,10 +94,7 @@ function searchPersons(cnp) {
 
 
 function addPerson() {
-    const person = Array.from(document.querySelectorAll(`input[name]`)).reduce((person, input) => {
-        person[input.name] = input.value;
-        return person;
-    }, {});
+    const person = extractPersonFromHTML();
     console.info("Saving...", person, JSON.stringify(person));
 
     fetch(API.CREATE.URL, {
@@ -111,7 +112,28 @@ function addPerson() {
         });
 }
 
+function extractPersonFromHTML() {
+    return Array.from(document.querySelectorAll(`input[name]`)).reduce((person, input) => {
+        person[input.name] = input.value;
+        return person;
+    }, {});
+}
 
+function updatePerson(person) {
+    fetch(API.UPDATE.URL, {
+        method: API.UPDATE.METHOD,
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(person)
+    })
+        .then(res => res.json())
+        .then(r => {
+            if (r.success) {
+                loadList();
+            }
+        });
+}
 
 function addEventListner() {
     const print = document.getElementById('print-button');
@@ -129,9 +151,10 @@ okButton.addEventListener("click", () => {
 });
 
 function printAndSave() {
-    if (currentPerson) {
+    const person = extractPersonFromHTML();
+    if (currentPerson && person.cnp === currentPerson.cnp) {
         console.info("da");
-        updatePerson();
+        updatePerson(person);
     }
     else {
         console.info("nu");
