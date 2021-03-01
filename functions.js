@@ -14,7 +14,7 @@ const API = {
 };
 
 if (location.host === "cristicozma.github.io") {
-    API.READ.URL = "persons2.json"
+    API.READ.URL = "persons2.json";
 }
 
 function insertPersons(persons) {
@@ -49,6 +49,19 @@ function loadList() {
 loadList();
 
 let currentPerson;
+
+function inputValue(person) {
+    console.info(Object.keys(person));
+    Object.keys(person).forEach(key => {
+        console.warn('key', key);
+        const input = document.querySelector(`input[name=${key}]`);
+        if (input) {
+            input.value = person[key];
+        }
+
+    })
+}
+
 function getPerson(cnp) {
     fetch(API.GET.URL + `?cnp=${cnp}`)
         .then(res => res.json())
@@ -57,15 +70,7 @@ function getPerson(cnp) {
             console.log(person);
             currentPerson = person;
             if (person) {
-                console.info(Object.keys(person));
-                Object.keys(person).forEach(key => {
-                    console.warn('key', key);
-                    const input = document.querySelector(`input[name=${key}]`);
-                    if (input) {
-                        input.value = person[key];
-                    }
-
-                })
+                inputValue(person);
             } else {
                 document.querySelector('input[name=cnp]').value = cnp;
             }
@@ -75,6 +80,9 @@ function getPerson(cnp) {
 
 function searchPersons(cnp) {
     console.warn("search", cnp, allPersons);
+    if (location.host === "cristicozma.github.io") {
+        API.READ.URL = "persons2.json";
+    }
     return allPersons.filter(function (p) {
         return p.cnp.indexOf(cnp) > -1;
     });
@@ -82,15 +90,10 @@ function searchPersons(cnp) {
 
 
 function addPerson() {
-    const cnp = document.querySelector("input[name=cnp]").value;
-    const firstName = document.querySelector("input[name=firstName]").value;
-    const lastName = document.querySelector("input[name=lastName]").value;
-
-    const person = {
-        cnp,
-        firstName,
-        lastName
-    };
+    const person = Array.from(document.querySelectorAll(`input[name]`)).reduce((person, input) => {
+        person[input.name] = input.value;
+        return person;
+    }, {});
     console.info("Saving...", person, JSON.stringify(person));
 
     fetch(API.CREATE.URL, {
@@ -108,19 +111,16 @@ function addPerson() {
         });
 }
 
-// function addEventListner() {
-//     const search = document.getElementById('search');
-//     search.addEventListener("input", e => {
-//         const cnp = e.target.value;
-//         const foundPerson = searchPersons(cnp);
-//         insertPersons(foundPerson);
-//     });
 
-//     const saveBtn = document.querySelector('#list tfoot button');
-//     saveBtn.addEventListener("click", addPerson);
-// }
 
-// addEventListner();
+function addEventListner() {
+    const print = document.getElementById('print-button');
+    print.addEventListener("click", e => {
+        printAndSave();
+    });
+}
+
+addEventListner();
 
 const searchInput = document.getElementById("search");
 const okButton = document.getElementById("submit-button");
@@ -129,22 +129,20 @@ okButton.addEventListener("click", () => {
 });
 
 function printAndSave() {
-    const printButton = document.getElementById("print-button");
-    printButton.addEventListener("click", () => {
-        if (currentPerson) {
-            console.info("da");
-            getPerson();
-        }
-        else {
-            console.info("nu");
-            addPerson();
-        }
-    });
+    if (currentPerson) {
+        console.info("da");
+        updatePerson();
+    }
+    else {
+        console.info("nu");
+        addPerson();
+    }
+    window.print();
 }
 
-printAndSave();
 
-// todo 
+
+// todo
 // - click on "Print"
 //   - if (crrentPerson) { update() } else { create() }
 //   - window.print() (https://github.com/nmatei/simple-quiz-app/blob/master/src/utilities.ts)
