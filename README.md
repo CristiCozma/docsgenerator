@@ -19,6 +19,9 @@ App that generates documents for institutions
 - [ ] Function that adds a person's informtion in the form inputs
 
 # DEV Notes
+- open node-api-docsgenerator in VS Code
+- open docsgenerator in VS Code
 - open Xampp - start Apache, MySQL
 - in VS Code - open terminal - npm install, npm start
 - in VS code - Shift+Ctrl+P - Browser Sync: Server mode in browser
+- Star(*) +  enter
