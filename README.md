@@ -16,6 +16,6 @@ App that generates documents for institutions
 # DEV Notes
 
 # Team
-- Cozma Cristian - [GitHub](http://github.com/CristiCozma)
-- Glodean Simona - [GitHub](http://github.com/simonaglodean)
-- Kovacs Reka- [GitHUb](http://github.com/rekakovacs97)
+- Cristian Cozma - [GitHub](http://github.com/CristiCozma)
+- Simona Glodean - [GitHub](http://github.com/simonaglodean)
+- Reka Kovacs- [GitHUb](http://github.com/rekakovacs97)
