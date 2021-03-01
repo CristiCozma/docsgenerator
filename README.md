@@ -14,3 +14,5 @@ App that generates documents for institutions
 - [ ] Function that adds a person's informtion in the form inputs
 
 # DEV Notes
+npm install
+npm start

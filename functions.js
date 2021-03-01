@@ -128,6 +128,21 @@ okButton.addEventListener("click", () => {
     getPerson(searchInput.value);
 });
 
+function printAndSave() {
+    const printButton = document.getElementById("print-button");
+    printButton.addEventListener("click", () => {
+        if (currentPerson) {
+            console.info("da");
+            getPerson();
+        }
+        else {
+            console.info("nu");
+            addPerson();
+        }
+    });
+}
+
+printAndSave();
 
 // todo 
 // - click on "Print"
