@@ -14,3 +14,8 @@ App that generates documents for institutions
 - [ ] Function that adds a person's informtion in the form inputs
 
 # DEV Notes
+
+# Team
+- Cozma Cristian - [GitHub](http://github.com/CristiCozma)
+- Glodean Simona - [GitHub](http://github.com/simonaglodean)
+- Kovacs Reka- [GitHUb](http://github.com/rekakovacs97)
