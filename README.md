@@ -6,6 +6,11 @@ App that generates documents for institutions
 
 - [Demo](https://cristicozma.github.io/docsgenerator/)
 
+# Team
+- <a target="_blank"  href="https://github.com/CristiCozma">Cristi Cozma </a>
+- <a target="_blank"  href="https://github.com/simonaglodean">Simona Glodean</a>
+- <a target="_blank"  href="https://github.com/rekakovacs97">Reka Kovacs </a>
+
 # Features
 
 - [x] Home screen with instructions
@@ -14,5 +19,6 @@ App that generates documents for institutions
 - [ ] Function that adds a person's informtion in the form inputs
 
 # DEV Notes
-npm install
-npm start
+- open Xampp - start Apache, MySQL
+- in VS Code - open terminal - npm install, npm start
+- in VS code - Shift+Ctrl+P - Browser Sync: Server mode in browser
