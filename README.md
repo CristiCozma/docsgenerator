@@ -26,3 +26,9 @@ App that generates documents for institutions
 - in VS Code - open terminal - npm install, npm start
 - in VS code - Shift+Ctrl+P - Browser Sync: Server mode in browser
 - Star(*) +  enter
+
+# TODO
+- [ ] Remove CNP Input from Homepage
+- [ ] Remove Formular C, Formular D, Formular E
+- [ ] Add Localitatea, strada, nr, bl, sc, ap, judet, e-mail, telefon
+- [ ] Add more style

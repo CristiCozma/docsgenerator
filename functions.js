@@ -19,6 +19,7 @@ const API = {
 
 if (location.host === "cristicozma.github.io") {
     API.READ.URL = "persons2.json";
+    API.GET.URL = "persons2.json";
 }
 
 function insertPersons(persons) {
@@ -67,6 +68,7 @@ function inputValue(person) {
 }
 
 function getPerson(cnp) {
+    console.error({ cnp })
     fetch(API.GET.URL + `?cnp=${cnp}`)
         .then(res => res.json())
         .then(persons => {
@@ -138,30 +140,26 @@ function updatePerson(person) {
 function addEventListner() {
     const print = document.getElementById('print-button');
     print.addEventListener("click", e => {
-        printAndSave();
+        const person = extractPersonFromHTML();
+        if (currentPerson && person.cnp === currentPerson.cnp) {
+            console.info("da");
+            updatePerson(person);
+        }
+        else {
+            console.info("nu");
+            addPerson();
+        }
+        window.print();
+    });
+
+    const searchInput = document.getElementById("search");
+    const okButton = document.getElementById("submit-button");
+    okButton.addEventListener("click", () => {
+        getPerson(searchInput.value);
     });
 }
 
 addEventListner();
-
-const searchInput = document.getElementById("search");
-const okButton = document.getElementById("submit-button");
-okButton.addEventListener("click", () => {
-    getPerson(searchInput.value);
-});
-
-function printAndSave() {
-    const person = extractPersonFromHTML();
-    if (currentPerson && person.cnp === currentPerson.cnp) {
-        console.info("da");
-        updatePerson(person);
-    }
-    else {
-        console.info("nu");
-        addPerson();
-    }
-    window.print();
-}
 
 
 
