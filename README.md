@@ -16,10 +16,11 @@ App that generates documents for institutions
 - [x] Home screen with instructions
 - [ ] Forms with individual pages (Cerere de inmatriculare, Cerere primrie, Contract instrainare)
 - [x] Search bar to find the persons in the database
-- [ ] Function that adds a person's informtion in the form inputs
+- [x] Function that adds a person's informtion in the form inputs
 
 # DEV Notes
 - open node-api-docsgenerator in VS Code
+- https://github.com/CristiCozma/node-api-docsgenerator
 - open docsgenerator in VS Code
 - open Xampp - start Apache, MySQL
 - in VS Code - open terminal - npm install, npm start

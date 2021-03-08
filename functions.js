@@ -7,6 +7,10 @@ const API = {
         URL: "http://localhost:3000/docsgenerator",
         METHOD: "GET"
     },
+    UPDATE: {
+        URL: "http://localhost:3000/docsgenerator/update",
+        METHOD: "PUT"
+    },
     GET: {
         URL: "http://localhost:3000/docsgenerator/person",
         METHOD: "GET"
@@ -14,7 +18,7 @@ const API = {
 };
 
 if (location.host === "cristicozma.github.io") {
-    API.READ.URL = "persons2.json"
+    API.READ.URL = "persons2.json";
 }
 
 function insertPersons(persons) {
@@ -49,6 +53,19 @@ function loadList() {
 loadList();
 
 let currentPerson;
+
+function inputValue(person) {
+    console.info(Object.keys(person));
+    Object.keys(person).forEach(key => {
+        console.warn('key', key);
+        const input = document.querySelector(`input[name=${key}]`);
+        if (input) {
+            input.value = person[key];
+        }
+
+    })
+}
+
 function getPerson(cnp) {
     fetch(API.GET.URL + `?cnp=${cnp}`)
         .then(res => res.json())
@@ -57,15 +74,7 @@ function getPerson(cnp) {
             console.log(person);
             currentPerson = person;
             if (person) {
-                console.info(Object.keys(person));
-                Object.keys(person).forEach(key => {
-                    console.warn('key', key);
-                    const input = document.querySelector(`input[name=${key}]`);
-                    if (input) {
-                        input.value = person[key];
-                    }
-
-                })
+                inputValue(person);
             } else {
                 document.querySelector('input[name=cnp]').value = cnp;
             }
@@ -75,6 +84,9 @@ function getPerson(cnp) {
 
 function searchPersons(cnp) {
     console.warn("search", cnp, allPersons);
+    if (location.host === "cristicozma.github.io") {
+        API.READ.URL = "persons2.json";
+    }
     return allPersons.filter(function (p) {
         return p.cnp.indexOf(cnp) > -1;
     });
@@ -82,15 +94,7 @@ function searchPersons(cnp) {
 
 
 function addPerson() {
-    const cnp = document.querySelector("input[name=cnp]").value;
-    const firstName = document.querySelector("input[name=firstName]").value;
-    const lastName = document.querySelector("input[name=lastName]").value;
-
-    const person = {
-        cnp,
-        firstName,
-        lastName
-    };
+    const person = extractPersonFromHTML();
     console.info("Saving...", person, JSON.stringify(person));
 
     fetch(API.CREATE.URL, {
@@ -108,19 +112,37 @@ function addPerson() {
         });
 }
 
-// function addEventListner() {
-//     const search = document.getElementById('search');
-//     search.addEventListener("input", e => {
-//         const cnp = e.target.value;
-//         const foundPerson = searchPersons(cnp);
-//         insertPersons(foundPerson);
-//     });
+function extractPersonFromHTML() {
+    return Array.from(document.querySelectorAll(`input[name]`)).reduce((person, input) => {
+        person[input.name] = input.value;
+        return person;
+    }, {});
+}
 
-//     const saveBtn = document.querySelector('#list tfoot button');
-//     saveBtn.addEventListener("click", addPerson);
-// }
+function updatePerson(person) {
+    fetch(API.UPDATE.URL, {
+        method: API.UPDATE.METHOD,
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(person)
+    })
+        .then(res => res.json())
+        .then(r => {
+            if (r.success) {
+                loadList();
+            }
+        });
+}
 
-// addEventListner();
+function addEventListner() {
+    const print = document.getElementById('print-button');
+    print.addEventListener("click", e => {
+        printAndSave();
+    });
+}
+
+addEventListner();
 
 const searchInput = document.getElementById("search");
 const okButton = document.getElementById("submit-button");
@@ -129,22 +151,21 @@ okButton.addEventListener("click", () => {
 });
 
 function printAndSave() {
-    const printButton = document.getElementById("print-button");
-    printButton.addEventListener("click", () => {
-        if (currentPerson) {
-            console.info("da");
-            getPerson();
-        }
-        else {
-            console.info("nu");
-            addPerson();
-        }
-    });
+    const person = extractPersonFromHTML();
+    if (currentPerson && person.cnp === currentPerson.cnp) {
+        console.info("da");
+        updatePerson(person);
+    }
+    else {
+        console.info("nu");
+        addPerson();
+    }
+    window.print();
 }
 
-printAndSave();
 
-// todo 
+
+// todo
 // - click on "Print"
 //   - if (crrentPerson) { update() } else { create() }
 //   - window.print() (https://github.com/nmatei/simple-quiz-app/blob/master/src/utilities.ts)
