@@ -28,7 +28,7 @@ App that generates documents for institutions
 - Star(*) +  enter
 
 # TODO
-- [ ] Remove CNP Input from Homepage
+- [x] Remove CNP Input from Homepage
 - [ ] Remove Formular C, Formular D, Formular E
 - [ ] Add Localitatea, strada, nr, bl, sc, ap, judet, e-mail, telefon
 - [ ] Add more style
