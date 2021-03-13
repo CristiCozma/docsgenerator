@@ -29,7 +29,7 @@ App that generates documents for institutions
 
 # TODO
 - [x] Remove CNP Input from Homepage
-- [ ] Remove Formular C, Formular D, Formular E
+- [x] Remove Formular C, Formular D, Formular E
 - [ ] Add Localitatea, strada, nr, bl, sc, ap, judet, e-mail, telefon
 - [ ] Add more style
 - [ ] Move person table to another single page
