@@ -35,10 +35,12 @@ function getPersonHtml(person) {
     const cnp = person.cnp;
     const firstName = person.firstName;
     const lastName = person.lastName;
+    const localitate = person.localitate;
     return `<tr>
         <td>${person.cnp}</td>
         <td>${person.firstName}</td>
         <td>${person.lastName}</td>
+        <td>${person.localitate}</td>
     </tr>`;
 }
 
