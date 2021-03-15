@@ -6,25 +6,32 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="print.css">
     <link rel="stylesheet" href="second.html">
+    <link rel="stylesheet" href="tableDB.html">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div id="header" class="dont-print">
-                <a href="https://www.gov.ro/" target="_blank"><img src="steag.jpeg" alt="tricolor"></a>
-                <h2>Document generator</h2>
+            <div id="header">
+                <a href="https://www.gov.ro/" target="_blank"><img src="steag.jpeg" alt="tricolor" width="100%"></a>
+               <!-- <h2>Document generator</h2> -->
+            </div>
+            <div id="header2">
+                <div id="firstboxheader">
+                    <h1>Document generator</h1>
+                </div>
+                <div class="subheader">
+                    <ul class="navbar">
+                        <li> <a href="index.html">Home</a></li>
+                        <li> <a href="first.html">Cerere de inmatriculare</a></li>
+                        <li> <a href="second.html">Cerere de primarie</a></li>
+                        <li> <a href="tableDB.html">Tabel Baza de Date</a></li>
+                        
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
-    <div class="subheader, dont-print">
-        <ul class="navbar">
-            <li> <a a href="index.html">Home</a></li>
-            <li> <a class="activ-link" href="first.html" href="#">Cerere de inmatriculare</a></li>
-            <li> <a href="second.html">Cerere de primarie</a></li>
-            <li> <a href="tableDB.html">Tabel Baza de Date</a></li>
-        </ul>
-    </div>
     <section id="content">
         <div id="side-menu" class="dont-print">
             <div id="persoana">
@@ -39,7 +46,7 @@
                 <button>OK</button>
             </div>
             -->
-        </div>
+        </div> 
         <div id="main">
             <div id="home" class="page">
                 <h2>Cerere de inmatriculare</h2>
@@ -82,10 +89,9 @@
                     oricăror informații de interes cu privire la operațiunea solicitată sau vehiculul care face
                     obiectul acesteia. <br> Am luat cunoştinţă de conţinutul Notei de Informare. <br>
                     Data <input type="date"> Semnatura <input type="text"></p>
+                    <br>
+                <button class="dont-print" id="print-button">Print</button>
             </div>
-
-            <button class="dont-print" id="print-button">Print</button>
-
         </div>
     </section>
     <footer>
