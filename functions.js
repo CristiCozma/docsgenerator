@@ -53,7 +53,10 @@ function loadList() {
         });
 }
 
-loadList();
+if (window.location.pathname == "/tableDB.html") {
+    loadList();
+}
+
 
 let currentPerson;
 
