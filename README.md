@@ -7,9 +7,10 @@ App that generates documents for institutions
 - [Demo](https://cristicozma.github.io/docsgenerator/)
 
 # Team
-- <a target="_blank"  href="https://github.com/CristiCozma">Cristi Cozma </a>
-- <a target="_blank"  href="https://github.com/simonaglodean">Simona Glodean</a>
-- <a target="_blank"  href="https://github.com/rekakovacs97">Reka Kovacs </a>
+
+- [Cristi Cozma](https://github.com/CristiCozma)
+- [Simona Glodean](https://github.com/simonaglodean)
+- [Reka Kovacs](https://github.com/rekakovacs97)
 
 # Features
 

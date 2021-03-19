@@ -144,18 +144,20 @@ function updatePerson(person) {
 
 function addEventListner() {
     const print = document.getElementById('print-button');
-    print.addEventListener("click", e => {
-        const person = extractPersonFromHTML();
-        if (currentPerson && person.cnp === currentPerson.cnp) {
-            console.info("da");
-            updatePerson(person);
-        }
-        else {
-            console.info("nu");
-            addPerson();
-        }
-        window.print();
-    });
+    if (print) {
+        print.addEventListener("click", e => {
+            const person = extractPersonFromHTML();
+            if (currentPerson && person.cnp === currentPerson.cnp) {
+                console.info("da");
+                updatePerson(person);
+            }
+            else {
+                console.info("nu");
+                addPerson();
+            }
+            window.print();
+        });
+    }
 
     const searchInput = document.getElementById("search");
     const okButton = document.getElementById("submit-button");
