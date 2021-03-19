@@ -4,7 +4,7 @@ html, body {
   height: 100%;
 }
 body {
-  background-image: url('background-homePage.jpeg');
+  background-image: url('Images/background-homePage.jpeg');
   color: #555;
   margin: 2px;
   font-family: "Montserrat", sans-serif;
@@ -13,72 +13,19 @@ body {
   flex-direction: column;
 }
 /*
-#header {
-  background-color: rgb(56, 55, 55);
-  height: 100px;
-  text-align: center;
-}
-
-#header h2 {
-  color: #f5f5f5;
-}
-
-#header img {
-  height: 100px;
-  filter: blur(1px);
-  padding-left: 20px;
-}
-
-.navbar {
-  text-align: center;
-  color: #ffffff;
-  background-color: #a5a5a5;
-  margin: 0;
-}
-
-.navbar li {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar a {
-  text-decoration: none;
-  padding: 10px 15px 10px 15px;
-  margin: 2px 0;
-  color: #ffffff;
-  display: inline-block;
-}*/
-
-#side-menu {
-  background-color: #ffffff;
-  margin: 21px 0;
-  padding: 24px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  color: #334455;
-  height: 15%;
-  opacity: 0.95;
-}
-
 #btn {
   border: none;
   color: white;
-  margin-top: 21px;
+  margin-top: 21px; ?
   cursor: pointer;
   font-size: 20px;
 }
-
+ */ 
 #main {
   margin: 2px;
   padding: 4px;
 }
-
-header,
-body > section {
-  flex: 1;
-}
-
+ 
 #content {
   flex: 4;
   display: flex;
@@ -87,7 +34,6 @@ body > section {
 
 #side-menu {
   flex: 1;
-  /* padding-top: 65px; */
 }
 
 #main {
@@ -101,94 +47,31 @@ body > section {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   opacity: 0.95;
-}
-
-p {
-  margin-bottom: 2px;
   text-align: center;
   font-size: 17px;
 }
-
+  
 h2 {
   text-align: center;
-  font-size: 29px;
+  font-size: 20px;
   padding-bottom: 15px;
 }
-
+*/
 #cnp,
 #vin {
   margin: 3px;
   border-radius: 5px;
 }
 
-#list {
-  border-collapse: collapse;
-  width: 100%;
-}
-#list th {
-  background-color: #00aeef;
-  color: white;
-}
-#list th, #list td {
-  border: 1px solid #29a7e1;
-  padding: 5px;
-}
-#list th:nth-child(even) {
-  background-color: hsl(165, 67%, 48%);
-}
-
-#print-button {
-  padding: 3px; 
-  margin-bottom: 10px;
-  margin-left: 50%;
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#footer {
-  text-align: center;
-  background-color: grey;
-  padding: 2px 10px 10px 10px;
-  opacity: 0.9;
-  color: white;
-  font-size: 18px;
-}
-
-#footer a {
-  color: #f5f5f5;
-}
-#footer a:hover {
-  font-weight: bold;
-}
-
-  .ullinks {
-  list-style-type: none;
-}
-
-
 .container {
   display: flex;
  
 }
 
-
-
-
 #header {
   float: left;
   width: 23%;
   background-color: rgba(136,136,136, 0.8);
-
 }
 
 #header2 {
@@ -236,4 +119,21 @@ h1 {
 
 #firstboxheader {
   background-color: #888888 ;
+}
+
+
+#footer {
+  text-align: center;
+  background-color: grey;
+  padding: 2px 10px 10px 10px;
+  opacity: 0.9;
+  color: white;
+  font-size: 18px;
+}
+
+#footer a {
+  color: #f5f5f5;
+}
+#footer a:hover {
+  font-weight: bold;
 }

@@ -3,19 +3,18 @@
 
 <head>
     <title>Document gen</title>
-    <!-- <link rel="stylesheet" href="style.css">  -->
+    <link rel="stylesheet" href="style.css">  
     <link rel="stylesheet" href="print.css">
     <link rel="stylesheet" href="second.css">
+    <link rel="stylesheet" href="first.html">
     <link rel="stylesheet" href="tableDB.html">
-
 </head>
 
 <body>
     <header>
         <div class="container">
             <div id="header">
-                <a href="https://www.gov.ro/" target="_blank"><img src="steag.jpeg" alt="tricolor" width="100%"></a>
-               <!-- <h2>Document generator</h2> -->
+                <a href="https://www.gov.ro/" target="_blank"><img src="Images/steag.jpeg" alt="tricolor" width="100%"></a>
             </div>
             <div id="header2">
                 <div id="firstboxheader">
@@ -40,53 +39,42 @@
                 <input maxlength="13" type="text" name="codNumeric" id="search" placeholder="Cod numeric personal">
                 <button id="submit-button">OK</button>
             </div>
-            <!--
-            <div id="vehicul">
-                <p>Introduceti VIN</p>
-                <input maxlength="17" type="text" name="serieSasiu" id="vin" placeholder="serie sasiu">
-                <button>OK</button>
-            </div>
-            -->
         </div>
         <div id="main">
             <div id="home" class="page">
                 <div id="mainbox">
                     <div id="boxes">
                         <div id="leftbox">
-                            <h2 class="styleleftbox">STEMA UNITATII ADMINISTRATIV-TERITORIALE</h2>
+                            <h2 class="styleleftbox" class="h2style" >STEMA UNITĂȚII ADMINISTRATIV-TERITORIALE</h2>
                         </div>
                         <div id="centerbox">
-                            <h2>ROMANIA</h2>
-                            <P class="stylecenterbox">Judetul <input class="inputstyle" type="text"> <br>
-                                UNITATEA/SUBUNITATEA ADMINISTRATIV-TERITORIALA</P>
-                            <p class="stylecenterbox">Codul de inregistrare fiscala: <input class="inputstyle"
-                                    type="text"> <br> Adresa/Cont IBAN/tel/fax/e-mail <input class="inputstyle"
-                                    type="text"></p>
+                            <h2 class="h2style">ROMÂNIA</h2>
+                            <P class="stylecenterbox" class="stylep" >Județul <input class="inputstyle" class="stylep" type="text"> <br>
+                                UNITATEA / SUBUNITATEA ADMINISTRATIV - TERITORIALĂ</P>
+                            <!--<p class="stylecenterbox" class="stylep">Codul de inregistrare fiscala: 
+                                <input class="inputstyle" class="stylep"  type="text"> <br> Adresa/Cont IBAN/tel/fax/e-mail <input class="inputstyle"
+                                    type="text"></p> -->
                         </div>
-                        <div id="rightbox">
-                            <h2>Model 2016 ITL - 005</h2>
-                            <p class="stylerightbox">Nr. inreg <input class="inputstyle" type="text"> / data <input
-                                    class="inputstyle" type="text"></p>
+                        <div id="rightbox"> 
+                            <h2 class="h2style">Model 2016 ITL - 005</h2>
+                            <p class="stylep"  class="stylerightbox">Nr. inreg <input class="inputstyle" type="text">  data <input
+                            class="inputstyle" type="text"></p>
                         </div>
                     </div>
                     <div id="boxes2">
                         <div id="firstleftbox">
-                            <p>Numarul de rol nominal unic</p>
+                            <p class="stylep">Numarul de rol nominal unic</p>
                         </div>
-                        <div id="secondleftbox">
-                            <p></p>
-                        </div>
+                        <div id="secondleftbox"></div>
                         <div id="firstrightbox">
-                            <p> Nr. si data a înregistrării în Registrul de evidență a mijloacelor de transport
+                            <p class="stylep"> Nr. si data a înregistrării în Registrul de evidență a mijloacelor de transport
                                 supuse înmatriculării/înregistrării,
                             </p>
                         </div>
-                        <div id="secondrightbox">
-                            <p></p>
-                        </div>
+                        <div id="secondrightbox"> </div>
                     </div>
                 </div>
-                <h2>Declaratie fiscala:</h2>
+                <h2 class="h2style">Declaratie fiscala:</h2>
                 <p>PENTRU STABILIREA IMPOZITULUI/TAXEI PE MIJLOACELE DE TRANSPORT AFLATE ÎN PROPRIETATEA</p><br>
                 <input type="checkbox">persoanelor fizie (PF) <input class="inputstyle" type="checkbox"> persoeanelor
                 juridice (PJ)
@@ -119,7 +107,7 @@
                     următoarele mijloace de transport:
                 <ul>
                     <li>mijloace de transport cu tracţiune mecanică supuse înmatriculării</li>
-                    <img src="doc2.png" alt="">
+                    <img src="Images/doc2.png" alt="">
                 </ul>
                 </p>
                 <p>
@@ -127,15 +115,15 @@
                     se precizează data dobândirii atașului și motocicleta de care este atașat în cele ce urmează:
                 <ul>
                     <li>Remorci, semiremorci sau rulote supuse înmatriculării</li>
-                    <img src="doc.png" alt="">
+                    <img src="Images/doc.png" alt="">
                     <li>Vehicule supuse înregistrării</li>
-                    <img src="doc3.png" alt="">
+                    <img src="Images/doc.png" alt="">
                 </ul>
                 </p>
                 <p>
                     Beneficiez de scutire/reducere de la plata impozitului pe mijloacele de transport, în
                     calitate de <input class="inputstyle" type=" "> . conform documentelor anexate <input
-                        class="inputstyle" type="text"> <br>
+                    class="inputstyle" type="text"> <br>
                     <input type="checkbox"> Sunt de acord ca actele administrative fiscale să-mi fie comunicate exclusiv
                     la adresa de poștă electronică.
                     <br> Anexez la prezenta declarație copii ale documentelor, certificate de conformitate cu
@@ -156,20 +144,16 @@
                 <br>
                 <button class="dont-print" id="print-button">Print</button>
             </div>
-            
-
-        </div>
+         </div>
     </section>
     <footer>
         <div id="footer" class="dont-print">
-            <h5></h5>Created with the help of
-            <a href="https://fasttrackit.org/" target="_blank">
-                <em>FastTrackIT</em></a>
-            </h5>
-            <p>I hope this app helped you</p>
+            <p class="stylefooter">Created with the help of
+                <a href="https://fasttrackit.org/" target="_blank"><em>FastTrackIT</em></a>
+            </p>
+            <p class="stylefooter">I hope this app helped you</p>
         </div>
     </footer>
     <script src="functions.js"></script>
 </body>
-
 </html>
