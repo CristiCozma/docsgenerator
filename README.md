@@ -2,24 +2,24 @@
 
 App that generates documents for institutions
 
-# Live Preview
+## Live Preview
 
 - [Demo](https://cristicozma.github.io/docsgenerator/)
 
-# Team
+## Team
 
 - [Cristi Cozma](https://github.com/CristiCozma)
 - [Simona Glodean](https://github.com/simonaglodean)
 - [Reka Kovacs](https://github.com/rekakovacs97)
 
-# Features
+## Features
 
 - [x] Home screen with instructions
 - [ ] Forms with individual pages (Cerere de inmatriculare, Cerere primrie, Contract instrainare)
 - [x] Search bar to find the persons in the database
 - [x] Function that adds a person's informtion in the form inputs
 
-# DEV Notes
+## DEV Notes
 - open node-api-docsgenerator in VS Code
 - https://github.com/CristiCozma/node-api-docsgenerator
 - open docsgenerator in VS Code
@@ -28,7 +28,7 @@ App that generates documents for institutions
 - in VS code - Shift+Ctrl+P - Browser Sync: Server mode in browser
 - Star(*) +  enter
 
-# TODO
+## TODO
 - [x] Remove CNP Input from Homepage
 - [x] Remove Formular C, Formular D, Formular E
 - [ ] Add Localitatea, strada, nr, bl, sc, ap, judet, e-mail, telefon
