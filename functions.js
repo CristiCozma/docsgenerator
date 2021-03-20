@@ -36,11 +36,17 @@ function getPersonHtml(person) {
     const firstName = person.firstName;
     const lastName = person.lastName;
     const localitate = person.localitate;
+    const numar = person.numar;
+    const email = person.email;
+    const telefon = person.telefon;
     return `<tr>
-        <td>${person.cnp}</td>
-        <td>${person.firstName}</td>
-        <td>${person.lastName}</td>
-        <td>${person.localitate}</td>
+        <td>${cnp}</td>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${localitate}</td>
+        <td>${numar}</td>
+        <td>${email}</td>
+        <td>${telefon}</td>
     </tr>`;
 }
 
