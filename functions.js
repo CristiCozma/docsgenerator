@@ -36,6 +36,7 @@ function getPersonHtml(person) {
     const firstName = person.firstName;
     const lastName = person.lastName;
     const localitate = person.localitate;
+    const strada = person.strada;
     const numar = person.numar;
     const email = person.email;
     const telefon = person.telefon;
@@ -44,6 +45,7 @@ function getPersonHtml(person) {
         <td>${firstName}</td>
         <td>${lastName}</td>
         <td>${localitate}</td>
+        <td>${strada}</td>
         <td>${numar}</td>
         <td>${email}</td>
         <td>${telefon}</td>

@@ -5,6 +5,7 @@
         "firstName": "Cristian",
         "lastName": "Cozma",
         "localitate": "Ploiesti",
+        "strada": "Revoltiei",
         "numar": 1158,
         "email": "test@gmail.com",
         "telefon": "0642738492"
@@ -15,6 +16,7 @@
         "firstName": "Reka",
         "lastName": "Kovacs",
         "localitate": "Braila",
+        "strada": "Recoltei",
         "numar": 1123,
         "email": "test@gmail.com",
         "telefon": "0642738492"
@@ -25,6 +27,7 @@
         "firstName": "Simona",
         "lastName": "Glodean",
         "localitate": "Oradea",
+        "strada": "Unirii",
         "numar": 1199,
         "email": "test@gmail.com",
         "telefon": "0642738492"
