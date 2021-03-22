@@ -171,3 +171,25 @@ h2 {
     text-align: center;
     color: white;
 }
+
+table, td {
+    border: 1px solid black;
+    padding: 15px;
+    border-collapse: collapse;
+}
+    
+.firstcolumn {
+    width: 32%;
+    font-weight: 700;
+    background-color: #cce5e5;
+}
+
+.secondcolumn {
+    width:68%;
+}
+
+#print-button {
+    padding: 3px; 
+    margin-bottom: 10px;
+    margin-left: 50%;
+} 
