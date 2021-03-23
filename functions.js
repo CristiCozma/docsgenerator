@@ -169,9 +169,11 @@ function addEventListner() {
 
     const searchInput = document.getElementById("search");
     const okButton = document.getElementById("submit-button");
-    okButton.addEventListener("click", () => {
-        getPerson(searchInput.value);
-    });
+    if(okButton) {
+        okButton.addEventListener("click", () => {
+            getPerson(searchInput.value);
+        });
+    }
 }
 
 addEventListner();
