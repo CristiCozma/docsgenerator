@@ -178,14 +178,3 @@ function addEventListner() {
 
 addEventListner();
 
-
-
-// todo
-// - click on "Print"
-//   - if (crrentPerson) { update() } else { create() }
-//   - window.print() (https://github.com/nmatei/simple-quiz-app/blob/master/src/utilities.ts)
-
-// css for print:
-// https://github.com/nmatei/simple-quiz-app/blob/master/public/index.html
-//  see css/print.css
-// hide header and side-bar
